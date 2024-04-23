@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color:hsl(0, 0%, 94%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ageCalculatorForm{
+    background-color: hsl(0, 0%, 100%);
+    width: 800px;
+    height: 600px;
+    border-radius: 4% 4% 25% 4%;
+    padding: 50PX;
+    margin: 0 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.card__inputs{
+    display: flex;
+    gap: 30px;
+}
+
+.card__inputs div P{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.card__inputs div label{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.card__inputs div input{
+   font-size: 32px;
+   width: 150px;
+   padding: 8px 20PX;
+   color: hsl(0, 0%, 8%);
+   font-weight: 700;
+   border-radius: 8px;
+   border: 1px solid hsl(0, 0%, 86%);
+}
+
+input:focus-visible{
+   outline: 1px solid #854dff;
+}
+
+small{
+    font-style: italic;
+    padding-top: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.card__input{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnSubmit{
+    border: none;
+    background-color: transparent;
+}
+
+.card__arrow span{
+    width: 600px; 
+}
+
+hr{
+    height: 1px;  
+    background-color: hsl(0, 0%, 86%);  
+    border: none; 
+} 
+
+.arrow{
+    background-color: #854dff;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.arrow:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 8%);
+}
+
+.card__results{
+    font-size: 6.2rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.card__results p{
+    line-height: 110px;
+}
+
+.card__result__years , .card__result__months, .card__result__days{
+    color: #854dff;
+    padding: 0;
+    margin: 0;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+.attribution{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ERROR  */
+.errorMessage{
+    color: red;
+}
+
+.errorInput{
+    outline: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.080);
+}
+
+#errorLabel{
+    color: red;
+}
+
+/* MEDIA  */
+
+@media (max-width: 768px) {
+    #ageCalculatorForm{
+        max-width: 700px;
+        height: auto;
+    }
+
+    .card__inputs{
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .card__arrow {
+        margin: 4rem 0 3rem;
+        text-align: center;
+        position: relative; /* Define o container como relativo */
+      }
+    
+    .card__arrow span {
+        position: relative; 
+    }
+    
+    .btnSubmit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+
+    .card__results{
+        width: auto; 
+    }
+}
+
+
+@media (max-width: 425px) {
+    #ageCalculatorForm{
+        max-width: 360px;
+        padding: 40px 20px;
+    }
+
+    .card__results{
+        width: 100%; 
+        font-size: 3.5rem;
+    }
+
+    .card__results p{
+        line-height: 60px;
+    }
+
+    .card__inputs div input{
+        font-size: 1rem;
+        width: 90px;
+     }
+
+     .arrow{
+        width: 4rem;
+     }
+}
+
+
+
+@media (max-width: 320px)
+{
+    #ageCalculatorForm{
+        width: 300px;
+    }
+
+    .card__results{
+        font-size: 2.8rem;
+    }
+
+    .card__results p{
+        line-height: 50px;
+    }
+
+    .card__inputs div input{
+        font-size: .9rem;
+        width: 80px;
+     }
+}
+
